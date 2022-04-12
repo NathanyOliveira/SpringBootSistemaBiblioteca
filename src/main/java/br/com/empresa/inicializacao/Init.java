@@ -56,7 +56,7 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 	
 		
 		
-		alunoRepo.saveAll(Arrays.asList(aluno1,aluno2,aluno3, aluno4)); // MESMA COISA QUE INSERTO INTO ALUNO( NOME ) VALUES ('NOME INSERIDO')
+	alunoRepo.saveAll(Arrays.asList(aluno1,aluno2,aluno3, aluno4)); // MESMA COISA QUE INSERTO INTO ALUNO( NOME ) VALUES ('NOME INSERIDO')
 		
 		
 		//CARGA DE TURMA (PERSISTIR )
@@ -130,6 +130,13 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 		avaliacaoJoaoJava.setConceito("B");
 		
 		avaliacaoService.save(avaliacaoJoaoJava);
+		
+		Avaliacao aval = avaliacaoService.buscarNotaAlunoDisciplina(alunoDisciplina);
+		System.out.println("Aluno:" + aval.getAlunoDisciplina());
+
+		System.out.println("Disciplina:" + aval.getAlunoDisciplina().getAluno().getNome());
+
+		System.out.println("Avaliação:" + aval.getConceito());
 	
 	}
 	

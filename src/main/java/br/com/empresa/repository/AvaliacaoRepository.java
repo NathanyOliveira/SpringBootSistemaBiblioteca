@@ -9,4 +9,8 @@ import br.com.empresa.entity.Avaliacao;
 @Repository
 public interface AvaliacaoRepository extends JpaRepository<Avaliacao, AlunoDisciplina >{
 
+	
+	//select * from avaliacao where idaluno = 3 and iddisciplina =6  o comando abaixo faz isso 
+	
+	Avaliacao findByAlunoDisciplina(AlunoDisciplina alunoDisciplina);
 }
