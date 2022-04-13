@@ -56,5 +56,5 @@ public class AvaliacaoResource {
 		Avaliacao avaliacao = service.buscarNotaAlunoDisciplina(alunoDisciplina);
 		return ResponseEntity.ok().body(avaliacao);
 	}
-	
+	//sadsafsfsdfsdfsf
 }
