@@ -132,9 +132,9 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 		avaliacaoService.save(avaliacaoJoaoJava);
 		
 		Avaliacao aval = avaliacaoService.buscarNotaAlunoDisciplina(alunoDisciplina);
-		System.out.println("Aluno:" + aval.getAlunoDisciplina());
+		System.out.println("Aluno:" + aval.getAlunoDisciplina().getAluno().getNome());
 
-		System.out.println("Disciplina:" + aval.getAlunoDisciplina().getAluno().getNome());
+		System.out.println("Disciplina:" + aval.getAlunoDisciplina().getDisciplina().getNome());
 
 		System.out.println("Avaliação:" + aval.getConceito());
 	
